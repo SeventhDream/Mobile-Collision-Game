@@ -226,7 +226,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &59930017
 Rigidbody2D:
   serializedVersion: 5
@@ -409,7 +411,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &278026096
 Rigidbody2D:
   serializedVersion: 5
@@ -729,7 +733,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &616107737
 Rigidbody2D:
   serializedVersion: 5
@@ -996,7 +1002,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &647107613
 Rigidbody2D:
   serializedVersion: 5
@@ -1179,7 +1187,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &766990536
 Rigidbody2D:
   serializedVersion: 5
@@ -1362,7 +1372,9 @@ MonoBehaviour:
   maxX: 8
   minY: -4.5
   maxY: 4.5
-  speed: 0.75
+  minSpeed: 0.75
+  maxSpeed: 1.5
+  secondsToMaxDifficulty: 10
 --- !u!50 &838080891
 Rigidbody2D:
   serializedVersion: 5

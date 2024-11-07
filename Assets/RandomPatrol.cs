@@ -11,7 +11,13 @@ public class RandomPatrol : MonoBehaviour
 
     Vector2 targetPosition; // Stores target (x,y) coordinates.
 
-    public float speed; // Defines how fast the object moves to target position.
+    // Define movement speed range limits.
+    public float minSpeed; 
+    public float maxSpeed;
+
+    private float speed;
+
+    public float secondsToMaxDifficulty; // Define total time elapsed in seconds until max game difficulty is reached.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +31,7 @@ public class RandomPatrol : MonoBehaviour
         // Move towards target position if not there already.
         if ((Vector2)transform.position != targetPosition)
         {
+            speed = Mathf.Lerp(minSpeed, maxSpeed, GetDifficultyPercent()); // Calculate current movement speed based on current difficulty fraction.
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
         // Generate new random target position if previous target has already been reached.
@@ -49,5 +56,11 @@ public class RandomPatrol : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload Current Scene.
         }
+    }
+
+    // Calculate current game difficulty level as a fraction of the maximum difficulty.
+    float GetDifficultyPercent()
+    {
+        return Mathf.Clamp01(Time.timeSinceLevelLoad / secondsToMaxDifficulty);
     }
 }
