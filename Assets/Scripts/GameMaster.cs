@@ -6,4 +6,16 @@ public class GameMaster : MonoBehaviour
     {
         SceneManager.LoadScene("GameEnv");
     }
+
+    // Restarts the current scene.
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // Returns to main menu scene.
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

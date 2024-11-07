@@ -14,8 +14,9 @@ public class RandomPatrol : MonoBehaviour
     // Define movement speed range limits.
     public float minSpeed; 
     public float maxSpeed;
-
     private float speed;
+
+    public GameObject restartPanel; // Stores Game Over UI
 
     public float secondsToMaxDifficulty; // Define total time elapsed in seconds until max game difficulty is reached.
 
@@ -54,7 +55,7 @@ public class RandomPatrol : MonoBehaviour
     {
         if (collision.tag == "Asteroids")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload Current Scene.
+            restartPanel.SetActive(true); // Reveal Game Over Screen.
         }
     }
 
