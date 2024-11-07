@@ -535,9 +535,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &59930017
 Rigidbody2D:
   serializedVersion: 5
@@ -721,9 +721,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &278026096
 Rigidbody2D:
   serializedVersion: 5
@@ -1180,9 +1180,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &616107737
 Rigidbody2D:
   serializedVersion: 5
@@ -1450,9 +1450,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &647107613
 Rigidbody2D:
   serializedVersion: 5
@@ -1636,9 +1636,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &766990536
 Rigidbody2D:
   serializedVersion: 5
@@ -1822,9 +1822,9 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpeed: 0.75
-  maxSpeed: 5
+  maxSpeed: 3
   restartPanel: {fileID: 2132359874}
-  secondsToMaxDifficulty: 10
+  secondsToMaxDifficulty: 100
 --- !u!50 &838080891
 Rigidbody2D:
   serializedVersion: 5
