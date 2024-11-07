@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RandomPatrol : MonoBehaviour
 {
@@ -39,5 +40,14 @@ public class RandomPatrol : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
         return new Vector2(randomX, randomY);
+    }
+
+    // Detect if two asteroids collide with eachother.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Asteroids")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload Current Scene.
+        }
     }
 }
