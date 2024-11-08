@@ -7,6 +7,8 @@ public class DragAndDrop : MonoBehaviour
     bool moveAllowed; // Represents whether parent GameObject is currently being moved by the player.
     Collider2D col; // Stores parent object collider.
 
+    public GameObject selectionEffect; // Stores particle effect for when player selects this object.
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +31,7 @@ public class DragAndDrop : MonoBehaviour
                 // Check if finger collider is touching the parent GameObject.
                 if (col == touchedCollider)
                 {
+                    Instantiate(selectionEffect, transform.position, Quaternion.identity); // Spawn particle effect without rotation.
                     moveAllowed = true; // Allow parent GameObject to be moved.
                 }
             }
