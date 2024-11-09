@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5024abb8c925b5741ad99cbbba5456b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartPanel: {fileID: 2132359874}
 --- !u!114 &35433763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +537,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &59930017
 Rigidbody2D:
@@ -614,6 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &278026092
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +724,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &278026096
 Rigidbody2D:
@@ -801,6 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &403437895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1184,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &616107737
 Rigidbody2D:
@@ -1261,6 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1455,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &647107613
 Rigidbody2D:
@@ -1532,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &766990532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1642,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &766990536
 Rigidbody2D:
@@ -1719,6 +1719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &838080887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,7 +1829,6 @@ MonoBehaviour:
   maxY: 4.5
   minSpeed: 0.75
   maxSpeed: 3
-  restartPanel: {fileID: 2132359874}
   secondsToMaxDifficulty: 100
 --- !u!50 &838080891
 Rigidbody2D:
@@ -1906,6 +1906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionEffect: {fileID: 1588502161614086380, guid: 8964b571f1255c4438e144f872d01127, type: 3}
+  restartPanel: {fileID: 0}
 --- !u!1 &1085383716
 GameObject:
   m_ObjectHideFlags: 0

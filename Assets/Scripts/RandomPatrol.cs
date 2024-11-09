@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// RandomPatrol.cs defines transform rules for moving to random coordinates in a straight line with a speed increasing proportionally with time to an upper limit.
+// Author: Reuel Terezakis
 public class RandomPatrol : MonoBehaviour
 {
     // Define position values for the edge of the screen (based on circle size).
@@ -16,7 +18,7 @@ public class RandomPatrol : MonoBehaviour
     public float maxSpeed;
     private float speed;
 
-    public GameObject restartPanel; // Stores Game Over UI
+    
 
     public float secondsToMaxDifficulty; // Define total time elapsed in seconds until max game difficulty is reached.
 
@@ -48,15 +50,6 @@ public class RandomPatrol : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
         return new Vector2(randomX, randomY);
-    }
-
-    // Detect if two asteroids collide with eachother.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Asteroids")
-        {
-            restartPanel.SetActive(true); // Reveal Game Over Screen.
-        }
     }
 
     // Calculate current game difficulty level as a fraction of the maximum difficulty.

@@ -1,18 +1,24 @@
 using UnityEngine;
 
-
+// DragAndDrop.cs allows the player's 1st touch to drag GameObjects around the screen and shows the Game Over UI on asteroid GameObject collision triggers.
+// Author: Reuel Terezakis
 public class DragAndDrop : MonoBehaviour
 {
 
     bool moveAllowed; // Represents whether parent GameObject is currently being moved by the player.
-    Collider2D col; // Stores parent object collider.
+    
 
     public GameObject selectionEffect; // Stores particle effect for when player selects this object.
+    public GameObject restartPanel; // Stores Game Over UI panel.
+
+    private Collider2D col; // Stores parent GameObject's collider component.
+    private GameMaster gm; // Stores the GameMaster script component.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        col = GetComponent<Collider2D>(); // Assign variable to collider component attached to the parent GameObject of this script.
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>(); // Find and store the GameMaster script component attached to the GameObject with the "GM" tag.
+        col = GetComponent<Collider2D>(); // Assign variable to collider component attached to the this GameObject.
     }
 
     // Update is called once per frame
@@ -51,6 +57,16 @@ public class DragAndDrop : MonoBehaviour
             {
                 moveAllowed = false; // Stop moving GameObject to finger position 
             }
+        }
+    }
+
+    // Detect if two GameObjects with the "Asteroids" tag collide with eachother.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Asteroids")
+        {
+            gm.GameOver(); // Call GameOver() function from the GameMaster variable.
+            Destroy(gameObject); // Destroy GameObject.
         }
     }
 }
