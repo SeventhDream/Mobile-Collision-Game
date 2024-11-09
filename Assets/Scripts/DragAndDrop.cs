@@ -7,18 +7,28 @@ public class DragAndDrop : MonoBehaviour
 
     bool moveAllowed; // Represents whether parent GameObject is currently being moved by the player.
     
-
+    // Particle effects.
     public GameObject selectionEffect; // Stores particle effect for when player selects this object.
-    public GameObject restartPanel; // Stores Game Over UI panel.
+    public GameObject deathEffect;  // Stores particle effect for when two asteroids collide.
 
-    private Collider2D col; // Stores parent GameObject's collider component.
-    private GameMaster gm; // Stores the GameMaster script component.
+    // Component variables.
+    private Collider2D col;
+    private GameMaster gm;
+    private SpriteRenderer sprite;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Audio source and clips.
+    private AudioSource audioSource;
+    public AudioClip grab;
+    public AudioClip crash;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created.
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>(); // Find and store the GameMaster script component attached to the GameObject with the "GM" tag.
-        col = GetComponent<Collider2D>(); // Assign variable to collider component attached to the this GameObject.
+        // Get component references.
+        sprite = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -38,6 +48,7 @@ public class DragAndDrop : MonoBehaviour
                 if (col == touchedCollider)
                 {
                     Instantiate(selectionEffect, transform.position, Quaternion.identity); // Spawn particle effect without rotation.
+                    audioSource.PlayOneShot(grab);
                     moveAllowed = true; // Allow parent GameObject to be moved.
                 }
             }
@@ -65,8 +76,12 @@ public class DragAndDrop : MonoBehaviour
     {
         if (collision.tag == "Asteroids")
         {
-            gm.GameOver(); // Call GameOver() function from the GameMaster variable.
-            Destroy(gameObject); // Destroy GameObject.
+            Instantiate(deathEffect, transform.position, Quaternion.identity); // Create crash particle effect.
+            audioSource.PlayOneShot(crash); // Play crash audio clip.
+            gm.GameOver(); // Call GameOver() function from the GameMaster script.
+            sprite.enabled = false; // Hide sprite image while audio is playing.
+            col.enabled = false; // Disable collider to prevent multiple collisions.
+            Destroy(gameObject, crash.length); // Destroy GameObject after crash audio has finished playing.
         }
     }
 }
