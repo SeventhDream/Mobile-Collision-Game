@@ -35,7 +35,7 @@ public class DragAndDrop : MonoBehaviour
     void Update()
     {
         // Check if player is touching the screen.
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !GameMaster.isGamePaused)
         {
             Touch touch = Input.GetTouch(0); // Store 1st touch in new variable.
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position); // Get 1st touch coordinates in worldspace (converted from pixelspace).
