@@ -49,9 +49,7 @@ public class RandomPatrol : MonoBehaviour
     {
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
-        Debug.Log(randomX);
         return new Vector2(randomX, randomY);
-        
     }
 
     // Calculate current game difficulty level as a fraction of the maximum difficulty.
