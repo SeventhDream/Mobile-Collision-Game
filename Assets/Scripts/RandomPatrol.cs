@@ -25,7 +25,7 @@ public class RandomPatrol : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        targetPosition = GetRandomPosition();
     }
 
     // Update is called once per frame
@@ -49,7 +49,9 @@ public class RandomPatrol : MonoBehaviour
     {
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
+        Debug.Log(randomX);
         return new Vector2(randomX, randomY);
+        
     }
 
     // Calculate current game difficulty level as a fraction of the maximum difficulty.
